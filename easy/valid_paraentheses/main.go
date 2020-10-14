@@ -19,12 +19,15 @@ func isValid(s string) bool {
 
 	for i := 0; i < len(s); i++ {
 		token := string(s[i])
-		openBracket, isCloseBracket := getTokenPairs[token]
+		tokenPair, isCloseBracket := getTokenPairs[token]
 		if isCloseBracket {
-			if len(stack) > 0 && stack[len(stack)-1] == openBracket {
+
+			if len(stack) > 0 && stack[len(stack)-1] == tokenPair {
+				// If the top of the stack is the opening bracket
 				stack.pop()
 			} else {
-				stack.push(token)
+				// If it is not, then it is not valid
+				return false
 			}
 		} else {
 			stack.push(token)
@@ -32,26 +35,6 @@ func isValid(s string) bool {
 
 	}
 
+	// stack should be empty
 	return stack.isEmpty()
-}
-
-type stack []string
-
-func (s *stack) isEmpty() bool {
-	return len(*s) == 0
-}
-
-func (s *stack) push(str string) {
-	*s = append(*s, str)
-}
-
-func (s *stack) pop() (string, bool) {
-	if s.isEmpty() {
-		return "", false
-	}
-
-	index := len(*s) - 1
-	element := (*s)[index]
-	*s = (*s)[:index]
-	return element, true
 }
