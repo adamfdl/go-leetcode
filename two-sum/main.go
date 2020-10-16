@@ -4,6 +4,8 @@ import (
 	"fmt"
 )
 
+// TAG: Array
+
 func main() {
 	result := twoSums([]int{3, 2, 3}, 6)
 	fmt.Printf("%d", result)
