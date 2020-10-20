@@ -1,5 +1,7 @@
 package main
 
+// TAG: Linked List
+
 import "fmt"
 
 type ListNode struct {
