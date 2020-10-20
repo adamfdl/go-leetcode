@@ -2,14 +2,12 @@ package main
 
 import "fmt"
 
-func main() {
-	// ll := LinkedList{}
-	// ll.appendOrdered(1)
-	// ll.appendOrdered(5)
-	// ll.appendOrdered(3)
-	// ll.appendOrdered(2)
-	// ll.print()
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
 
+func main() {
 	node := &ListNode{Val: 1, Next: nil}
 	appendNode(node, 2)
 	appendNode(node, 3)
@@ -17,10 +15,7 @@ func main() {
 	appendNode(node, 5)
 
 	middleNode := middleNode(node)
-	// fmt.Println(result)
-
 	printNodes(middleNode)
-
 }
 
 func appendNode(node *ListNode, n int) {
