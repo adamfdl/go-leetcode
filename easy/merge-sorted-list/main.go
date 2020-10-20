@@ -1,5 +1,7 @@
 package main
 
+// TAG: Linked List
+
 func main() {
 	mergeTwoLists(nil, nil)
 }
@@ -15,6 +17,7 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 		newListHead = newList
 	)
 
+	// Iterate both list, only go through next if one value is smalle than the other
 	for l1 != nil && l2 != nil {
 		if l1.Val < l2.Val {
 			newList.Next = l1

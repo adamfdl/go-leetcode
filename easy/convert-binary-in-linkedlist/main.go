@@ -1,27 +1,22 @@
 package main
 
+// Tag: Linked List
+
 import (
 	"fmt"
 	"strconv"
 )
 
-func main() {
-	// ll := LinkedList{}
-	// ll.appendOrdered(1)
-	// ll.appendOrdered(5)
-	// ll.appendOrdered(3)
-	// ll.appendOrdered(2)
-	// ll.print()
+type ListNode struct {
+	Val  int
+	Next *ListNode
+}
 
+func main() {
 	node := &ListNode{Val: 1, Next: nil}
 
 	appendNode(node, 0)
 	appendNode(node, 1)
-
-	// for node != nil {
-	// 	fmt.Printf("Data: %v\n", node.Val)
-	// 	node = node.Next
-	// }
 
 	result := getDecimalValue(node)
 	fmt.Println(result)
