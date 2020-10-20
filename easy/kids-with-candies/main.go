@@ -1,5 +1,7 @@
 package main
 
+// TAG: Array
+
 func main() {
 	kidsWithCandies([]int{2, 3, 5, 1, 3}, 3)
 }
