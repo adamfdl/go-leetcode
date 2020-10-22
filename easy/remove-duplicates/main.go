@@ -6,18 +6,6 @@ import (
 )
 
 func main() {
-	// stack := stack{}
-	// stack.push(1)
-	// stack.push(1)
-	// stack.push(1)
-	// stack.push(1)
-	// stack.push(1)
-
-	// fmt.Println(stack.items)
-
-	// stack.pop()
-
-	// fmt.Println(stack.items)
 
 	result := removeDuplicates("abbaca")
 	fmt.Println(result)
