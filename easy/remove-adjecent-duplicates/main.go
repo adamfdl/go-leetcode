@@ -1,5 +1,7 @@
 package main
 
+// TAG: Stack
+
 import (
 	"bytes"
 	"fmt"
